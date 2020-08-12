@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Profile from './Profile';
+import Products from './Products';
+import Product from './Product';
 
 class App extends Component {
   render() {
@@ -12,14 +14,17 @@ class App extends Component {
         <Router>
           <div className="top-nav">
               <Link className="top-link" to="/">Home</Link>
+              <Link className="top-link" to="/Products">Products</Link>
               <Link className="top-link" to="/my-profile">My Profile</Link>
               <Link className="top-link" to="/about-us">About Us</Link>
           </div>
-          <switch>
+          {/* <switch> */}
             <Route path="/about-us" component={About}/>
             <Route path="/my-profile" component={Profile}/>
+            <Route exact path="/products" component={Products}/>
+            <Route path="/products/:id" component={Product}/>
             <Route exact path="/" component={Home}/>
-          </switch>
+          {/* </switch> */}
         </Router>
       </div>
     );

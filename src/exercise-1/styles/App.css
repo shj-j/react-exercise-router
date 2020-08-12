@@ -18,3 +18,9 @@
 .child-page{
     margin: 30px;
 }
+.content-link{
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    display: grid;
+}
